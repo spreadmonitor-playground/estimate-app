@@ -1,13 +1,20 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button>
+      <ion-icon slot="icon-only" name="arrow-dropleft"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
 <ion-content>
-  
+
   <div class="page-body">
-    
+
     <div class="avatars">
-      <sm-avatar></sm-avatar>
+      <sm-avatar name="Oláh Attila" indicatorIcon="checkmark"></sm-avatar>
     </div>
 
     <div class="estimation-list-wrapper">
-  
+
       <div class="estimation-list">
         <p>Complexity</p>
         <div class="estimation-button complexity" *ngFor="let item of complexities">{{item}}</div>
@@ -16,11 +23,11 @@
         <p>Effort</p>
         <div class="estimation-button effort" *ngFor="let item of efforts">{{item}}</div>
       </div>
-  
+
     </div>
-  
+
     <div class="spacer"></div>
-  
+
     <ion-button fill="outline" class="ready">Ready</ion-button>
 
   </div>
