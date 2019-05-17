@@ -3,35 +3,54 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 50px;
+  height: 60px;
   align-items: center;
   padding: 0 5px;
 
-  .avatar {
-    $size: 40px;
-    width: $size;
-    height: $size;
-    border-radius: 50%;
-    border: solid black thin;
-    background: grey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 2px;
-    position: relative;
+  border-bottom: solid thin rgba(74,74,74,0.5);
+}
 
-    .status {
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      background: green;
-      border-radius: 50%;
-      border: solid black thin;
-      width: 16px;
-      height: 16px;
-      color: white;
+ion-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.estimation-list-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .estimation-list {
+    width: 50%;
+
+    &:first-child {
+      padding-right: 3.5px;
     }
+
+    &:last-child {
+      padding-left: 3.5px;
+    }
+
   }
 
+  .estimation-button {
+    height: 23px;
+    margin: 0 0px 4px;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: solid #979797 thin;
+    box-sizing: content-box;
+    line-height: 23px;
+
+    &.complexity {
+      background: #D4C5F9;
+    }
+
+    &.effort {
+      background: #C2E0C6;
+    }
+
+    &.selected {
+      border-color: #4A90E2;
+    }
+  }
 }

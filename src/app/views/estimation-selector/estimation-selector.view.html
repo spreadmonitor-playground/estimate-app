@@ -1,43 +1,24 @@
 <ion-content>
 
   <div class="avatars">
-    <div class="avatar">
-      <span>AO</span>
-      <div class="status">
-        <ion-icon name="checkmark"></ion-icon>
-      </div>
-    </div>
-    <div class="avatar">
-      <span>R</span>
-      <div class="status">
-        <ion-icon name="checkmark"></ion-icon>
-      </div>
-    </div>
-    <div class="avatar">
-      <span>M</span>
-      <div class="status">
-        <ion-icon name="checkmark"></ion-icon>
-      </div>
-    </div>
-    <div class="avatar">
-      <span>ACs</span>
-      <div class="status">
-        <ion-icon name="checkmark"></ion-icon>
-      </div>
-    </div>
-    <div class="avatar">
-      <span>AB</span>
-      <div class="status">
-        <ion-icon name="checkmark"></ion-icon>
-      </div>
-    </div>
-    <div class="avatar">
-      <span>B</span>
-      <div class="status">
-        <ion-icon name="checkmark"></ion-icon>
-      </div>
-    </div>
+    <sm-avatar></sm-avatar>
   </div>
 
+  <div class="estimation-list-wrapper">
+
+    <div class="estimation-list">
+      <p>Complexity</p>
+      <div class="estimation-button complexity" *ngFor="let item of complexities">{{item}}</div>
+    </div>
+    <div class="estimation-list effort">
+      <p>Effort</p>
+      <div class="estimation-button effort" *ngFor="let item of efforts">{{item}}</div>
+    </div>
+
+  </div>
+
+  <div class="spacer"></div>
+
+  <button fill="outline">Ready</button>
 
 </ion-content>
