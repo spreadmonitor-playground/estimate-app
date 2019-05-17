@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-room-selector-view',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class RoomSelectorViewComponent {
 
+  constructor(
+    private router: Router,
+  ) { }
 }
