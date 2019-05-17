@@ -54,3 +54,14 @@ ion-content {
     }
   }
 }
+
+.page-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.ready {
+  width: 100%;
+  align-self: center;
+}
