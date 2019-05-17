@@ -19,6 +19,8 @@
 .logo {
   margin: 24px auto;
   height: 58px;
+  // do not shrink the logo when the keyboard is opened.
+  flex-shrink: 0;
 }
 
 .top-bar {
@@ -26,6 +28,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+/* Button modifiers */
+.btn {
+  &--full {
+    width: 100%;
+  }
 }
 
 .spacer {
