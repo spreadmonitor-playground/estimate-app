@@ -27,7 +27,7 @@ export class SplashScreenViewComponent implements OnInit {
 
   async ngOnInit() {
     await this.platform.ready();
-    await this.router.navigate([this.profileService.userName ? '/room-selector' : '/first-run']);
+    await this.router.navigate([this.profileService.userNameSet ? '/room-selector' : '/first-run']);
 
     this.statusBar.styleDefault();
     this.splashScreen.hide();
