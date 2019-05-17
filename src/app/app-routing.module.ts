@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: '', redirectTo: 'splash', pathMatch: 'full' },
+  { path: 'splash', loadChildren: './views/splash-screen/splash-screen.module#SplashScreenViewModule' },
+  { path: 'first-run', loadChildren: './views/first-run/first-run.module#FirstRunViewModule' },
 ];
 
 @NgModule({
