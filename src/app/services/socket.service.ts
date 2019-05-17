@@ -76,7 +76,7 @@ export class SocketService {
 
     public sendEstimation(groupId: string, estimation: Estimation) {
         console.log('sending estimation', estimation);
-        this.socket.emit('sendEstimation', {groupId, estimation});
+        this.socket.emit(`${groupId}:sendEstimation`, {groupId, estimation});
     }
 
     public unsubscribeFromEstimations(groupId: string) {
