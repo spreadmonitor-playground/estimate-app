@@ -8,8 +8,12 @@ const sendEstimations = (socket, groupId) => {
 };
 
 const createEstimation = socket => {
+  console.log('Create handler for estimation');
   return ({ complexity, effort, userId }) => {
-    estimations = [
+    console.log('Creating estimation');
+    console.log({ complexity, effort, userId });
+    const group = groups.find(({ id }) => id === groupId);
+    group.estimations = [
       ...estimations,
       createNewEstimation(complexity, effort, userId)
     ];
