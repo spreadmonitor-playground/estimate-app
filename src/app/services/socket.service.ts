@@ -27,11 +27,11 @@ export class SocketService {
         this.socket = io(this.url);
 
         this.socket.on('connect', (e) => {
-            console.log('sziomio');
+            console.log('[SocketService] Connection created.');
         });
 
         this.socket.on('groups', (groups: Group[]) => {
-            console.log('jott groups', groups);
+            console.log('[SocketService] Groups has been updated.', groups);
             this.groupsChanges.next(groups);
         });
 
