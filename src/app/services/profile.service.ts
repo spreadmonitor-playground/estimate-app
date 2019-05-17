@@ -7,8 +7,8 @@ import { uuid } from '../utils';
 })
 export class ProfileService {
 
-  private readonly memeberId: string = uuid();
   private readonly USER_NAME_KEY = 'sm.config.username';
+  private readonly USER_ID_KEY = 'sm.config.id';
 
   get userNameSet(): boolean {
     const name = localStorage.getItem(this.USER_NAME_KEY);
@@ -18,12 +18,13 @@ export class ProfileService {
 
   set userName(value: string) {
     localStorage.setItem(this.USER_NAME_KEY, value);
+    localStorage.setItem(this.USER_ID_KEY, uuid());
   }
 
   get user(): Member {
     if (this.userNameSet) {
       return {
-        id: this.memeberId,
+        id: localStorage.getItem(this.USER_ID_KEY),
         name: localStorage.getItem(this.USER_NAME_KEY)
       };
     }

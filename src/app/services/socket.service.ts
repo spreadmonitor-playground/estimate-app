@@ -27,17 +27,13 @@ export class SocketService {
         this.socket = io(this.url);
 
         this.socket.on('connect', (e) => {
-            console.log('sziomio');
+            console.log('[SocketService] Connection created.');
         });
 
         this.socket.on('groups', (groups: Group[]) => {
-            console.log('jott groups', groups);
+            console.log('[SocketService] Groups has been updated.', groups);
             this.groupsChanges.next(groups);
         });
-
-        // this.socket.on('estimations', (estimations: Estimation[]) => {
-        //     this.estimationsChanges.next(estimations);
-        // });
 
         this.socket.on('disconnect', () => {
             this.connect();
@@ -71,6 +67,16 @@ export class SocketService {
         this.socket.on(`${groupId}:estimations`, (estimations: Estimation[]) => {
             this.estimationsChanges.next(estimations);
         });
+    }
+
+    public startEstimation(groupId: string) {
+        console.log('creating estimation');
+        this.socket.emit('startEstimation', groupId);
+    }
+
+    public sendEstimation(groupId: string, estimation: Estimation) {
+        console.log('sending estimation', estimation);
+        this.socket.emit('sendEstimation', {groupId, estimation});
     }
 
     public unsubscribeFromEstimations(groupId: string) {
