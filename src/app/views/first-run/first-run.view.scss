@@ -1,0 +1,46 @@
+.page-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 380px;
+
+  margin: 24px auto;
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  input {
+    outline: none;
+    display: block;
+    height: 42px;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 0 12px;
+    border: 1px solid #D8D8D8; // TODO: use style here
+    border-radius: 2px;
+  }
+}
+
+.save {
+  width: 100%;
+  align-self: center;
+}
