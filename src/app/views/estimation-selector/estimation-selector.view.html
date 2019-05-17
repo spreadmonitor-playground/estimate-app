@@ -1,27 +1,27 @@
 <ion-content>
-  
+
   <div class="page-body">
-    
+
     <div class="avatars">
       <sm-avatar></sm-avatar>
     </div>
 
     <div class="estimation-list-wrapper">
-  
+
       <div class="estimation-list">
         <p>Complexity</p>
-        <div class="estimation-button complexity" *ngFor="let item of complexities">{{item}}</div>
+        <div class="estimation-button complexity" (click)="selectedComplexity = item" *ngFor="let item of complexities" [ngClass]="{ 'selected': selectedComplexity === item }">complexity: {{item}}</div>
       </div>
       <div class="estimation-list effort">
         <p>Effort</p>
-        <div class="estimation-button effort" *ngFor="let item of efforts">{{item}}</div>
+        <div class="estimation-button effort" (click)="selectedEffort = i" *ngFor="let effort of efforts; let i = index" [ngClass]="{ 'selected': selectedEffort === i }">{{effort}}</div>
       </div>
-  
+
     </div>
-  
+
     <div class="spacer"></div>
-  
-    <ion-button fill="outline" class="ready">Ready</ion-button>
+
+    <ion-button [disabled]="canSelectReady" fill="outline" class="ready" (click)="ready()">Ready</ion-button>
 
   </div>
 
