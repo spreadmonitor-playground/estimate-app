@@ -1,0 +1,14 @@
+<ion-content>
+  <div class="page-body">
+    <img class="logo" src='/assets/app-logo.svg'>
+    <div class="list">
+      <div class="item" *ngFor="let group of (groupService.groups | async)">
+        <div *ngFor="let member of group.members">{{ member.name }}</div>
+        <div class="spacer"></div>
+        <div>Join</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <ion-button class="btn-full" fill="outline" (click)="startSession()">Start Session</ion-button>
+  </div>
+</ion-content>

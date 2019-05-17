@@ -9,3 +9,34 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+@import './theme/typography.css';
+
+.ion-page {
+  padding: 26px 20px 20px;
+}
+
+/* Main logo in the intro pages */
+.logo {
+  margin: 24px auto;
+  height: 58px;
+  // do not shrink the logo when the keyboard is opened.
+  flex-shrink: 0;
+}
+
+.top-bar {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Button modifiers */
+.btn {
+  &--full {
+    width: 100%;
+  }
+}
+
+.spacer {
+  flex-grow: 1;
+}

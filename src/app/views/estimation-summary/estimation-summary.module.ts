@@ -4,20 +4,22 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { HomePage } from './home.page';
+import { EstimationSummaryViewComponent } from './estimation-summary.view';
+import { SharedModule } from 'src/app/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        component: EstimationSummaryViewComponent
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [EstimationSummaryViewComponent]
 })
-export class HomePageModule {}
+export class EstimationSummaryViewModule {}

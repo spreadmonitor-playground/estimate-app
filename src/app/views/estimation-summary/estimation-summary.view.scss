@@ -1,0 +1,70 @@
+.page-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.average-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  border-bottom: solid thin #979797;
+
+  font-size: 72px;
+
+  .average-card {
+    padding: 5px;
+    border: solid thin #979797;
+    border-radius: 2px;
+
+    &.complexity {
+      background: #D4C5F9;
+    }
+
+    &.effort {
+      background: #C2E0C6;
+    }
+  }
+}
+
+.estimation-list {
+
+  .estimation-list-item {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid thin #979797;
+    padding: 0 5px;
+
+    &.own {
+      background: #E7E4E4;
+
+      sm-avatar {
+        border: solid #4A90E2 thin;
+      }
+    }
+
+    .estimation-result {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 32px;
+
+        &.complexity {
+          color: #AEA0D0;
+        }
+        &.effort {
+          color: #9EB7A1;
+        }
+      }
+    }
+  }
+
+  .new-turn {
+    width: 100%;
+  }
+
+}
