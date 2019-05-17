@@ -17,6 +17,12 @@
   .item {
     display: flex;
     width: 100%;
+    align-items: baseline;
+
+    .join {
+      text-transform: uppercase;
+      color: #4A90E2;
+    }
   }
 
 }
