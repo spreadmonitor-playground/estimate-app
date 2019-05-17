@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class EstimationSummaryViewComponent {
 
+  public estimations = [
+    {
+      complexity: 5,
+      effort: 5,
+      member: {
+        name: '2 T'
+      }
+    },
+    {
+      complexity: 5,
+      effort: 5,
+      member: {
+        name: 'T T'
+      },
+      own: true
+    }
+  ]
 }

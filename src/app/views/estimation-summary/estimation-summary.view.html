@@ -1,3 +1,30 @@
 <ion-content>
-  <p>Estimation Summary view</p>
+
+  <div class="page-body">
+
+    <div class="average-wrapper">
+      <span class="average-card complexity">5</span>
+      <span class="">.</span>
+      <span class="average-card effort">5</span>
+    </div>
+
+    <div class="estimation-list">
+      <div class="estimation-list-item" [class.own]="estimation.own" *ngFor="let estimation of estimations">
+        <sm-avatar [name]="estimation.member.name"></sm-avatar>
+
+        <div class="spacer"></div>
+
+        <div class="estimation-result">
+          <span class="complexity">{{estimation.complexity}}</span>
+          <span>.</span>
+          <span class="effort">{{estimation.effort}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <ion-button fill="outline" class="new-turn">New turn</ion-button>
+
+  </div>
 </ion-content>
