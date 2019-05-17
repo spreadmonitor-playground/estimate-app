@@ -12,7 +12,7 @@
 @import './theme/typography.css';
 
 .ion-page {
-  padding: 26px 20px 20px;
+  padding: 44px 20px 20px;
 }
 
 /* Main logo in the intro pages */
@@ -23,11 +23,11 @@
   flex-shrink: 0;
 }
 
-.top-bar {
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+ion-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
 /* Button modifiers */
