@@ -4,10 +4,6 @@
   flex-direction: column;
 }
 
-.logo {
-  flex-shrink: 0;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -38,9 +34,4 @@ form {
     border: 1px solid #D8D8D8; // TODO: use style here
     border-radius: 2px;
   }
-}
-
-.save {
-  width: 100%;
-  align-self: center;
 }

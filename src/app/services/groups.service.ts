@@ -48,7 +48,7 @@ export class GroupsService implements OnDestroy {
     this.selectedGroup.next(group);
   }
 
-  public leaveGroup(id: string) {
+  public leaveCurrentGroup() {
     console.warn(`[GroupsService] I won't care about your id`);
     this.socketService.leaveGroup(this.profileService.user, this.selectedGroupId);
     this.socketService.unsubscribeFromEstimations(this.selectedGroupId);
