@@ -13,7 +13,7 @@ export class GroupsService implements OnDestroy {
   public groups: Subject<Group[]> = new Subject();
   public selectedGroup: Subject<Group> = new Subject();
 
-  private selectedGroupId: string;
+  public selectedGroupId: string;
 
   private onDestroy: Subject<boolean> = new Subject();
 
