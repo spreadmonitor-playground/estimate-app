@@ -1,5 +1,5 @@
 const { createNewEstimation } = require('./estimation');
-const { groups } = require('./group.handlers');
+const { groups } = require('../group.handlers');
 
 const sendEstimations = (socket, groupId) => {
   console.log("Sending estimations ...");
