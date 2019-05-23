@@ -37,6 +37,13 @@ export class Group implements EstimationGroup {
   }
 
   public addEstimation(estimation: Estimation): boolean {
+    const estimationIndex = this.estimations.findIndex(({ userId }) => estimation.userId === userId);
+    if (estimationIndex !== -1) {
+      this._estimations[estimationIndex] = estimation;
+
+      return false;
+    }
+
     this._estimations = [...this.estimations, estimation];
 
     return true;

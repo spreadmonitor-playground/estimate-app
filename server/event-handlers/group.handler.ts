@@ -57,6 +57,10 @@ export function leaveGroup(socket: Socket): ({ userId, groupId }: { userId: stri
 
         group.removeMember(userId);
 
+        if (!group.members.length) {
+            groups = groups.filter(({ id }) => id !== group.id)
+        }
+
         sendGroups(socket);
     }
 }
