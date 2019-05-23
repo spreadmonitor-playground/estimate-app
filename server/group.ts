@@ -29,8 +29,21 @@ export class Group implements EstimationGroup {
     return true;
   }
 
+  public removeMember(userId: string): boolean {
+    const existed = !!this.members.find(({ id }) => id === userId);
+    this._members = this.members.filter(({ id }) => id === userId);
+
+    return existed;
+  }
+
   public addEstimation(estimation: Estimation): boolean {
     this._estimations = [...this.estimations, estimation];
+
+    return true;
+  }
+
+  public resetEstimation(): boolean {
+    this._estimations = [];
 
     return true;
   }
