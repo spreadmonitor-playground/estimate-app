@@ -1,0 +1,42 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+@import './theme/typography.css';
+
+.ion-page {
+  padding: 44px 20px 20px;
+}
+
+/* Main logo in the intro pages */
+.logo {
+  margin: 24px auto;
+  height: 58px;
+  // do not shrink the logo when the keyboard is opened.
+  flex-shrink: 0;
+}
+
+ion-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+/* Button modifiers */
+.btn {
+  &--full {
+    width: 100%;
+  }
+}
+
+.spacer {
+  flex-grow: 1;
+}

@@ -1,0 +1,22 @@
+<ion-toolbar>
+  <ion-buttons slot="end">
+    <ion-button [routerLink]="['/first-run']">
+      <ion-icon slot="icon-only" name="settings"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <div class="page-body">
+    <img class="logo" src="/assets/app-logo.svg" />
+    <div class="list">
+      <div class="item" *ngFor="let group of groupService.allGroups | async">
+        <sm-avatar [name]="member.name" *ngFor="let member of group.members"></sm-avatar>
+        <div class="spacer"></div>
+        <div class="join" (click)="groupService.enterGroup(group)">Join</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <ion-button class="btn-full" fill="outline" (click)="startSession()">Start Session</ion-button>
+  </div>
+</ion-content>

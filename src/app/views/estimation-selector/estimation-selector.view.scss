@@ -1,0 +1,67 @@
+.avatars {
+  outline: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 65px;
+  align-items: center;
+  padding: 0 5px;
+
+  border-bottom: solid thin rgba(74, 74, 74, 0.5);
+}
+
+ion-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.estimation-list-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .estimation-list {
+    width: 50%;
+
+    &:first-child {
+      padding-right: 3.5px;
+    }
+
+    &:last-child {
+      padding-left: 3.5px;
+    }
+  }
+
+  .estimation-button {
+    height: 23px;
+    margin: 0 0px 4px;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: solid #979797 thin;
+    box-sizing: content-box;
+    line-height: 23px;
+
+    &.complexity {
+      background: #d4c5f9;
+    }
+
+    &.effort {
+      background: #c2e0c6;
+    }
+
+    &.selected {
+      // border-color: #4A90E2;
+      border-color: red;
+    }
+  }
+}
+
+.page-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.ready {
+  width: 100%;
+  align-self: center;
+}

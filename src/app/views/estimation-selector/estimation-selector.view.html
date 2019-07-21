@@ -1,0 +1,36 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="leave()">
+      <ion-icon slot="icon-only" name="arrow-dropleft"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+
+  <div class="page-body">
+
+    <div class="avatars">
+      <sm-avatar [name]="member.name" [indicatorIcon]="member.status" *ngFor="let member of members"></sm-avatar>
+    </div>
+
+    <div class="estimation-list-wrapper">
+
+      <div class="estimation-list">
+        <p>Complexity</p>
+        <div class="estimation-button complexity" (click)="selectedComplexity = item" *ngFor="let item of complexities" [ngClass]="{ 'selected': selectedComplexity === item }">complexity: {{item}}</div>
+      </div>
+      <div class="estimation-list effort">
+        <p>Effort</p>
+        <div class="estimation-button effort" (click)="selectedEffort = i" *ngFor="let effort of efforts; let i = index" [ngClass]="{ 'selected': selectedEffort === i }">{{effort}}</div>
+      </div>
+
+    </div>
+
+    <div class="spacer"></div>
+
+    <ion-button [disabled]="canSelectReady" fill="outline" class="ready" (click)="ready()">Ready</ion-button>
+
+  </div>
+
+
+</ion-content>

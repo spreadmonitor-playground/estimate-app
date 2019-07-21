@@ -1,0 +1,7 @@
+{
+  "name": "Estimate",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

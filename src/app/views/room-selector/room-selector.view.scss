@@ -1,0 +1,28 @@
+.page-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 380px;
+
+  margin: 24px auto;
+
+  .item {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+
+    .join {
+      text-transform: uppercase;
+      color: #4A90E2;
+    }
+  }
+
+}

@@ -1,0 +1,17 @@
+<ion-content>
+  <div class="page-body">
+    <img class="logo" src='/assets/app-logo.svg'>
+    <form [formGroup]="form">
+      <div class="input-wrapper">
+        <label for="firstName">First name</label>
+        <input type="text" name="firstName" formControlName="firstName">
+      </div>
+      <div class="input-wrapper">
+        <label for="lastName">Last name</label>
+        <input type="text" name="lastName" formControlName="lastName">
+      </div>
+    </form>
+    <div class="spacer"></div>
+    <ion-button [disabled]="!form.valid" class="btn-full" fill="outline" (click)="save()">Save</ion-button>
+  </div>
+</ion-content>

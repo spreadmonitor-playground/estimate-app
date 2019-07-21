@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="page-body">
+    <div class="average-wrapper">
+      <span class="average-card complexity">{{ complexityAvg | number: '0.0-0' || '&nbsp;&nbsp;&nbsp;' }}</span>
+      <span class="">.</span>
+      <span class="average-card effort">{{ effortAvg | number: '0.0-0' || '&nbsp;&nbsp;&nbsp;' }}</span>
+    </div>
+
+    <div class="estimation-list">
+      <div class="estimation-list-item" [class.own]="false" *ngFor="let estimation of estimations">
+        <sm-avatar [name]="getName(estimation.userId)"></sm-avatar>
+
+        <div class="spacer"></div>
+
+        <div class="estimation-result">
+          <span class="complexity">{{ estimation.complexity }}</span>
+          <span>.</span>
+          <span class="effort">{{ estimation.effort }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <ion-button fill="outline" class="new-turn" (click)="newTurn()">New turn</ion-button>
+  </div>
+</ion-content>
