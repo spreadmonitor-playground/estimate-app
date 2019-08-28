@@ -6,4 +6,4 @@ install:
 script:
   - npm run prettier:check
   - npm run lint:check
-  - npm run build
+  - npm run build:angular
